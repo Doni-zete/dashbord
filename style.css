@@ -1,0 +1,610 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f0e5;
+  /* Light peach/cream background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  /* Aumentar o padding geral do body */
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ffeadb;
+  border-radius: 25px;
+  /* Mais arredondado */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Sombra mais pronunciada */
+  padding: 50px;
+  /* Aumentar o padding interno do container */
+  width: 100%;
+  max-width: 1600px;
+  /* Largura máxima bem maior */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* Aumentar o espaçamento entre as seções */
+}
+
+.top-section-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  /* Dar mais espaço para a seção motivacional */
+  gap: 50px;
+  /* Aumentar o espaçamento entre as colunas */
+  align-items: start;
+}
+
+.motivational-section {
+  background-color: #f7d2b2;
+  border-radius: 20px;
+  /* Mais arredondado */
+  padding: 40px;
+  /* Aumentar padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra um pouco maior */
+}
+
+.motivational-section h3 {
+  color: #a0522d;
+  margin-top: 0;
+  font-size: 2em;
+  /* Aumentar fonte significativamente */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Mais espaço para o ícone */
+}
+
+/* Ícone motivacional */
+.motivational-section h3 img {
+  width: 35px;
+  /* Ajustar tamanho do ícone */
+  height: 35px;
+}
+
+.motivational-section p {
+  color: #6a4030;
+  font-style: italic;
+  line-height: 1.7;
+  /* Mais line-height para melhor leitura */
+  font-size: 2.25em;
+  /* Aumentar fonte */
+}
+
+.progress-container {
+  background-color: #90ee90;
+  /* Verde claro */
+  border-radius: 20px;
+  /* Mais arredondado */
+  padding: 40px;
+  /* Aumentar padding */
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-section h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  /* Mais margem inferior */
+  font-size: 2.2em;
+  /* Aumentar fonte */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#weekly-progress {
+  font-size: 1.6em;
+  /* Aumentar fonte */
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  /* Aumentar padding */
+  border-radius: 10px;
+  /* Mais arredondado */
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Mais espaçamento entre as barras */
+}
+
+.main-progress-bar {
+  width: 25%;
+  /* Isso será atualizado pelo JS */
+  height: 30px;
+  /* Aumentar altura da barra principal */
+  background-color: #3cb371;
+  /* Verde mais escuro */
+  border-radius: 15px;
+  /* Mais arredondado */
+  align-self: flex-start;
+}
+
+.day-progress-bars {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* Mais espaçamento entre as barras diárias */
+  height: 70px;
+  /* Aumentar altura */
+  align-items: flex-end;
+}
+
+.bar {
+  flex-grow: 1;
+  background-color: #66cdaa;
+  /* Verde médio */
+  border-radius: 10px 10px 0 0;
+  /* Mais arredondado */
+}
+
+/* Specific bar heights (mantidos como exemplo, o JS ajusta) */
+.bar-1,
+.bar-2,
+.bar-3 {
+  height: 100%;
+}
+
+.bar-4 {
+  height: 67%;
+}
+
+.bar-5 {
+  height: 33%;
+}
+
+.bar-6,
+.bar-7 {
+  height: 0;
+}
+
+.day-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  /* Aumentar fonte */
+  margin-top: 10px;
+  /* Mais margem superior */
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Bottom Section: Metas e Calendário */
+.bottom-section-wrapper {
+  background-color: #f7d2b2;
+  border-radius: 20px;
+  /* Mais arredondado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  /* Aumentar padding */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  /* Aumentar espaçamento entre as colunas */
+}
+
+/* Metas */
+.goals-section {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  min-width: 280px;
+  /* Largura mínima bem maior para as metas */
+  flex-shrink: 0;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.goals-section h3 {
+  color: #a0522d;
+  margin-top: 0;
+  font-size: 2em;
+  /* Aumentar fonte */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Mais espaço para o ícone */
+  margin-bottom: 30px;
+  /* Mais margem inferior */
+}
+
+/* Ícone das metas */
+.goals-section h3 img {
+  width: 35px;
+  /* Ajustar tamanho do ícone */
+  height: 35px;
+}
+
+#goal-list {
+  list-style: none;
+  padding: 5;
+  margin: 5;
+  display: contents;
+}
+
+#goal-list li {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  /* Aumentar altura da linha da meta para mais espaço */
+  padding: 10px 1px;
+  /* Aumentar padding horizontal */
+  color: #6a4030;
+  border-bottom: 2px solid rgba(160, 82, 45, 0.2);
+  box-sizing: border-box;
+  line-height: 1.4;
+  /* Mais line-height para o texto */
+}
+
+#goal-list li:last-child {
+  border-bottom: none;
+}
+
+.goal-text {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+  /* Aumentar fonte do texto da meta */
+}
+
+/* Calendário */
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  /* Mais margem */
+  color: #a0522d;
+  font-size: 1.8em;
+  /* Aumentar fonte */
+  width: 100%;
+}
+
+.calendar-navigation button {
+  background-color: #3cb371;
+  /* Verde */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  /* Mais arredondado */
+  padding: 12px 25px;
+  /* Aumentar padding */
+  cursor: pointer;
+  font-size: 1.2em;
+  /* Aumentar fonte */
+  transition: background-color 0.3s ease;
+}
+
+.calendar-navigation button:hover {
+  background-color: #2e8b57;
+  /* Verde mais escuro no hover */
+}
+
+.calendar-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+  /* Mais padding inferior para barra de rolagem */
+  position: relative;
+  /* Ajustar altura para acomodar o cabeçalho e as linhas de meta */
+  height: calc(75px + (var(--num-goals) * 80px));
+  /* Altura do cabeçalho (25px+50px) + (num_metas * altura_linha_meta) */
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-rows: 25px 50px;
+  /* Altura exata para nome do dia e número do dia (25+50=75px) */
+  grid-auto-columns: 70px;
+  /* Aumentar largura das colunas do calendário */
+  grid-auto-flow: column;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1.1em;
+  /* Aumentar fonte */
+  color: #a0522d;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(160, 82, 45, 0.1);
+}
+
+.calendar-day-name,
+.calendar-day-number-header {
+  text-align: center;
+  width: 70px;
+  /* Largura da coluna */
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(160, 82, 45, 0.1);
+  border-bottom: 1px solid rgba(160, 82, 45, 0.1);
+  box-sizing: border-box;
+}
+
+.calendar-day-name {
+  grid-row: 1;
+  height: 25px;
+  /* Altura exata para o nome do dia */
+}
+
+.calendar-day-number-header {
+  grid-row: 2;
+  height: 50px;
+  /* Altura exata para o número do dia */
+  font-size: 1.2em;
+  /* Aumentar fonte dos números do dia */
+}
+
+.calendar-day-name.weekend,
+.calendar-day-number-header.weekend {
+  color: #e91e63;
+  /* Cor dos finais de semana */
+}
+
+/* Grid principal do calendário com checkboxes */
+.calendar-grid {
+  display: grid;
+  grid-template-rows: repeat(var(--num-goals), 80px);
+  /* Altura fixa de 80px para cada linha de checkbox, IGUAL ÀS METAS */
+  grid-auto-columns: 70px;
+  /* Aumentar largura das colunas do calendário */
+  grid-auto-flow: column;
+  width: fit-content;
+  gap: 0;
+}
+
+.calendar-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  /* Altura fixa para cada célula de checkbox, IGUAL ÀS METAS */
+  border-right: 1px solid rgba(160, 82, 45, 0.1);
+  border-bottom: 1px solid rgba(160, 82, 45, 0.1);
+  box-sizing: border-box;
+}
+
+.calendar-cell input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 35px;
+  /* Aumentar tamanho do checkbox */
+  height: 35px;
+  /* Aumentar tamanho do checkbox */
+  border: 3px solid #3cb371;
+  /* Borda mais grossa e verde */
+  border-radius: 8px;
+  /* Mais arredondado */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.calendar-cell input[type="checkbox"]:checked {
+  background-color: #3cb371;
+  /* Fundo verde quando checado */
+  border-color: #3cb371;
+}
+
+.calendar-cell input[type="checkbox"]:checked::after {
+  content: '✓';
+  color: white;
+  font-size: 28px;
+  /* Aumentar tamanho do check */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilos para células vazias (padding days) */
+.empty-cell {
+  visibility: hidden;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+
+  /* Ajustar breakpoint para telas maiores de tablet/laptops menores */
+  .container {
+    padding: 30px;
+    gap: 35px;
+    max-width: 100%;
+    /* Permite que ocupe a largura total */
+  }
+
+  .top-section-wrapper,
+  .bottom-section-wrapper {
+    grid-template-columns: 1fr;
+    /* Mudar para uma coluna em telas menores */
+    gap: 30px;
+  }
+
+  .motivational-section h3,
+  .goals-section h3 {
+    font-size: 1.8em;
+  }
+
+  .motivational-section p,
+  .goal-text {
+    font-size: 1.1em;
+  }
+
+  .goals-section {
+    min-width: unset;
+    position: static;
+    padding-bottom: 25px;
+  }
+
+  #goal-list {
+    display: block;
+  }
+
+  #goal-list li {
+    margin-bottom: 12px;
+    height: auto;
+    min-height: 60px;
+    /* Nova min-height para telas menores */
+    padding: 0 8px;
+  }
+
+  .calendar-wrapper {
+    margin-left: -30px;
+    /* Compensa padding do container */
+    margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .calendar-scroll-container {
+    height: auto;
+    min-height: calc(65px + (var(--num-goals) * 60px));
+    /* Ajusta min-height com nova min-height da meta */
+  }
+
+  .calendar-grid,
+  .calendar-header {
+    grid-template-rows: repeat(var(--num-goals), 60px);
+    grid-auto-columns: 60px;
+  }
+
+  .calendar-cell,
+  .calendar-day-name,
+  .calendar-day-number-header {
+    height: 60px;
+    width: 60px;
+  }
+
+  .calendar-header {
+    grid-template-rows: 25px 40px;
+  }
+
+  .calendar-day-name {
+    height: 25px;
+  }
+
+  .calendar-day-number-header {
+    height: 40px;
+  }
+
+  .calendar-cell input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+
+  .calendar-cell input[type="checkbox"]:checked::after {
+    font-size: 24px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .motivational-section h3,
+  .goals-section h3 {
+    font-size: 1.6em;
+  }
+
+  .motivational-section p,
+  .goal-text {
+    font-size: 1em;
+  }
+
+  .progress-section h2 {
+    font-size: 1.8em;
+  }
+
+  #weekly-progress {
+    font-size: 1.3em;
+  }
+
+  .calendar-navigation {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .calendar-navigation button {
+    padding: 8px 18px;
+    font-size: 1em;
+  }
+
+  .calendar-wrapper {
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .calendar-scroll-container {
+    min-height: calc(50px + (var(--num-goals) * 50px));
+    /* Mais compacta em telas muito pequenas */
+  }
+
+  .calendar-grid,
+  .calendar-header {
+    grid-template-rows: repeat(var(--num-goals), 50px);
+    grid-auto-columns: 50px;
+  }
+
+  .calendar-cell,
+  .calendar-day-name,
+  .calendar-day-number-header {
+    height: 50px;
+    width: 50px;
+  }
+
+  .calendar-header {
+    grid-template-rows: 20px 30px;
+  }
+
+  .calendar-day-name {
+    height: 20px;
+  }
+
+  .calendar-day-number-header {
+    height: 30px;
+  }
+
+  .calendar-cell input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+  }
+
+  .calendar-cell input[type="checkbox"]:checked::after {
+    font-size: 20px;
+  }
+}
