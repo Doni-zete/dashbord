@@ -1,0 +1,48 @@
+/* css/base.css */
+
+:root {
+  --primary-bg-color: #f5f5dc;
+  /* Beige */
+  --secondary-bg-color: #fce4cc;
+  /* Lighter Orange for sections */
+  --text-color-dark: #4f2f0b;
+  /* Dark Brown */
+  --text-color-light: #ffffff;
+  --progress-green-light: #a8e6cf;
+  --progress-green-medium: #7bdcb5;
+  --progress-green-dark: #4adea7;
+  --weekend-color: #e74c3c;
+  /* Red for weekends */
+  --border-color: rgba(160, 82, 45, 0.1);
+  /* Earthy border */
+
+  /* CSS Variable for number of goals, set by JS */
+  --num-goals: 6;
+  /* Default value, will be overridden by JS */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: white;
+  /* Or a light background */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  /* Adjust as needed */
+  width: 100%;
+}

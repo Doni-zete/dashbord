@@ -1,0 +1,64 @@
+/* css/layout.css */
+
+.top-section-wrapper,
+.bottom-section-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+.top-section-wrapper>div,
+.bottom-section-wrapper>div {
+  flex: 1;
+  /* Distribute space equally */
+  min-width: 300px;
+  /* Minimum width before wrapping */
+}
+
+.motivational-section,
+.progress-container,
+.goals-section,
+.calendar-wrapper {
+  background-color: var(--secondary-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.motivational-section {
+  color: var(--text-color-dark);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.motivational-section h3 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8em;
+}
+
+.motivational-section img {
+  height: 30px;
+  /* Adjust icon size */
+}
+
+.goals-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color-dark);
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.goals-section img {
+  height: 30px;
+  /* Adjust icon size */
+}
