@@ -1,0 +1,75 @@
+/* css/progress.css */
+
+.progress-container {
+  background-color: var(--progress-green-light);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-section h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#weekly-progress {
+  font-size: 1.6em;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-progress-bar {
+  width: 25%;
+  /* Isso será atualizado pelo JS */
+  height: 30px;
+  background-color: var(--progress-green-dark);
+  border-radius: 15px;
+  align-self: flex-start;
+  transition: width 0.5s ease-out;
+  /* Smooth transition for progress bar */
+}
+
+.day-progress-bars {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  height: 70px;
+  align-items: flex-end;
+}
+
+.bar {
+  flex-grow: 1;
+  background-color: var(--progress-green-medium);
+  border-radius: 10px 10px 0 0;
+  transition: height 0.5s ease-out;
+  /* Smooth transition for daily bars */
+}
+
+/* Specific bar heights (mantidos como exemplo, o JS ajusta) */
+/* .bar-1, .bar-2, .bar-3 { height: 100%; }
+.bar-4 { height: 67%; }
+.bar-5 { height: 33%; }
+.bar-6, .bar-7 { height: 0; } */
+
+.day-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}

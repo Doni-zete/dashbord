@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minhas Metas e Progresso</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/motivational.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/goals.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <div class="container">
         <div class="top-section-wrapper">
             <div class="motivational-section">
-                <h3>MOTIVACIONAL DO DIA 💡✨</h3>
-                <p id="motivational-quote"></p>
+                <h3>MOTIVACIONAL DO DIA <img src="caminho/para/icone-motivacional.png" alt="Ícone de estrela e fogo"></h3>
+                <p>"A persistência é o caminho do êxito."</p>
             </div>
-
             <div class="progress-container">
                 <div class="progress-section">
-                    <h2>Progresso Semanal (%) <span id="weekly-progress">25%</span></h2>
+                    <h2>Progresso Semanal (%) <span id="weekly-progress">0%</span></h2>
                     <div class="progress-bars">
-                        <div class="main-progress-bar"></div>
+                        <div class="main-progress-bar" style="width: 0%;"></div>
                         <div class="day-progress-bars">
+                            <div class="bar bar-0"></div>
                             <div class="bar bar-1"></div>
                             <div class="bar bar-2"></div>
                             <div class="bar bar-3"></div>
                             <div class="bar bar-4"></div>
                             <div class="bar bar-5"></div>
                             <div class="bar bar-6"></div>
-                            <div class="bar bar-7"></div>
                         </div>
                         <div class="day-progress-labels">
-                            <span>100%</span>
-                            <span>100%</span>
-                            <span>100%</span>
-                            <span>67%</span>
-                            <span>33%</span>
+                            <span>0%</span>
+                            <span>0%</span>
+                            <span>0%</span>
+                            <span>0%</span>
+                            <span>0%</span>
                             <span>0%</span>
                             <span>0%</span>
                         </div>
@@ -43,34 +48,33 @@
         </div>
 
         <div class="bottom-section-wrapper">
-          <div class="goals-section">
-              <h3>Minhas Metas 💡✨</h3>
-              <ul id="goal-list">
-                <li><span class="goal-text">📗 Postar Stories (Definir quantidade)</span></li>
-                <li><span class="goal-text">✅ Postar Reels (Definir quantidade)</span></li>
-                <li><span class="goal-text">🚩 Produzir Reels do dia seguinte</span></li>
-                <li><span class="goal-text">🔥 Analisar Métricas Shopee</span></li>
-                <li><span class="goal-text"> Acrescente uma meta pessoal aqui</span></li>
-                <li><span class="goal-text">Acrescente uma meta pessoal aqui</span></li>
-            </ul>
-          </div>
-      
-          <div class="calendar-wrapper">
-              <div class="calendar-navigation">
-                  <button id="prev-month">Anterior</button>
-                  <span id="current-month-year"></span>
-                  <button id="next-month">Próximo</button>
-              </div>
-              <div class="calendar-scroll-container">
-                  <div id="calendar-header" class="calendar-header">
-                      </div>
-                  <div id="calendar-grid" class="calendar-grid">
-                      </div>
-              </div>
-          </div>
-      </div>
+            <div class="goals-section">
+                <h3>Minhas Metas <img src="caminho/para/icone-metas.png" alt="Ícone Metas"></h3>
+                <ul id="goal-list">
+                    <li><span class="goal-text">Postar Stories (Definir quantidade)</span></li>
+                    <li><span class="goal-text">Postar Reels (Definir quantidade)</span></li>
+                    <li><span class="goal-text">Produzir Reels do dia seguinte</span></li>
+                    <li><span class="goal-text">Analisar Métricas Shopee</span></li>
+                    <li><span class="goal-text">Acrescente uma meta pessoal aqui</span></li>
+                    <li><span class="goal-text">Acrescente uma meta pessoal aqui</span></li>
+                </ul>
+            </div>
+
+            <div class="calendar-wrapper">
+                <div class="calendar-navigation">
+                    <button id="prev-month-btn">Anterior</button>
+                    <h2 id="month-display">Junho 2025</h2> <button id="next-month-btn">Próximo</button>
+                </div>
+                <div class="calendar-scroll-container">
+                    <div id="calendar-header" class="calendar-header">
+                    </div>
+                    <div id="calendar-grid" class="calendar-grid">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

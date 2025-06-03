@@ -1,0 +1,8 @@
+/* css/motivational.css */
+
+.motivational-section p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 15px 0 0 0;
+  line-height: 1.5;
+}

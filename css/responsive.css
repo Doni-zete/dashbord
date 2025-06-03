@@ -1,0 +1,96 @@
+/* css/responsive.css */
+
+@media (max-width: 768px) {
+
+  .top-section-wrapper,
+  .bottom-section-wrapper {
+    flex-direction: column;
+    /* Stack sections vertically */
+    gap: 20px;
+  }
+
+  .top-section-wrapper>div,
+  .bottom-section-wrapper>div {
+    min-width: unset;
+    /* Remove min-width for stacking */
+    width: 100%;
+  }
+
+  .progress-container {
+    padding: 30px;
+  }
+
+  .progress-section h2 {
+    font-size: 1.8em;
+    flex-direction: column;
+    /* Stack title and percentage */
+    gap: 10px;
+  }
+
+  #weekly-progress {
+    font-size: 1.4em;
+    padding: 8px 15px;
+  }
+
+  .calendar-navigation h2 {
+    font-size: 1.5em;
+  }
+
+  .calendar-navigation button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  /* Adjust calendar cell size if needed for smaller screens */
+  .calendar-header,
+  .calendar-grid {
+    grid-auto-columns: 60px;
+    /* Smaller column width for days */
+  }
+
+  .calendar-day-name,
+  .calendar-day-number-header,
+  .calendar-cell {
+    width: 60px;
+    /* Match column width */
+  }
+
+  .calendar-scroll-container {
+    /* Adjust height for smaller screens if content feels too tall */
+    height: calc(75px + (var(--num-goals) * 70px));
+    /* Slightly reduce row height */
+  }
+
+  .calendar-cell input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+  }
+
+  .calendar-cell input[type="checkbox"]:checked::after {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .motivational-section h3,
+  .goals-section h3 {
+    font-size: 1.5em;
+  }
+
+  .motivational-section p {
+    font-size: 1em;
+  }
+
+  .goals-section li {
+    padding: 12px 15px;
+    font-size: 1em;
+  }
+}
